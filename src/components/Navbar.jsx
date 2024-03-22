@@ -10,7 +10,6 @@ const Navbar = ({ updateMyFunction }) => {
             {obj}
           </button>
         ))}
-        {/* .. */}
       </div>
     </>
   );
