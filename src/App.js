@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import A from "./components/Navbar";
+import B from "./components/Main";
 
-function App() {
+const App = () => {
+  const [name, setName] = React.useState("nothing");
+  const updateMyFunction = (e) => {
+    setName(e);
+    console.log(e);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <A updateMyFunction={updateMyFunction} />
+      <B name={name} />
+    </>
   );
-}
+};
 
 export default App;
