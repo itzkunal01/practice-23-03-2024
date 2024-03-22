@@ -4,7 +4,9 @@ const Main = ({ name }) => {
   return (
     <>
       <div className="text-center p-5 text-danger text-uppercase">
-        <h2>This is my {name} section.</h2>
+        <h2>
+          <b>This is my {name} section.</b>
+        </h2>
       </div>
     </>
   );
